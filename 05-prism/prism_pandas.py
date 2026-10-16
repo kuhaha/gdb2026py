@@ -13,7 +13,7 @@ class Prism():
 
     def __init__(self, dataf):
         assert(os.path.exists(dataf))
-        self._cvt = pd.read_csv(dataf, dtype='category')
+        self._cvt = pd.read_csv(dataf, dtype='category', encoding="utf-8")
 
     def fit(self, label=[]):
         data, attributes = (self._cvt.loc[:], self._cvt.columns)
